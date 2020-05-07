@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pedidos",
+  "info": {
+    "name": "pedido"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "platillos": {
+      "collection": "platillo",
+      "via": "pedidos",
+      "dominant": true
+    },
+    "fecha": {
+      "type": "datetime"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "pedidos"
+    },
+    "mesa": {
+      "type": "string"
+    },
+    "comentarios": {
+      "type": "richtext"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "pendiente",
+        "preparacion",
+        "servido"
+      ]
+    }
+  }
+}

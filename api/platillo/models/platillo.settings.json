@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "platillos",
+  "info": {
+    "name": "platillo"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "imagen": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "descripcion": {
+      "type": "string"
+    },
+    "costo": {
+      "type": "decimal"
+    },
+    "pedidos": {
+      "via": "platillos",
+      "collection": "pedido"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/platillos",
+      "handler": "platillo.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/platillos/count",
+      "handler": "platillo.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/platillos/:id",
+      "handler": "platillo.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/platillos",
+      "handler": "platillo.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/platillos/:id",
+      "handler": "platillo.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/platillos/:id",
+      "handler": "platillo.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
