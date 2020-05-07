@@ -1,3 +1,4 @@
-# Strapi application
+# Strapi API
 
-A quick description of your strapi application
+1. npm install
+2. npm run develop
