@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/platillos-de-pedidos",
+      "handler": "platillos-de-pedido.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/platillos-de-pedidos/count",
+      "handler": "platillos-de-pedido.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/platillos-de-pedidos/:id",
+      "handler": "platillos-de-pedido.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/platillos-de-pedidos",
+      "handler": "platillos-de-pedido.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/platillos-de-pedidos/:id",
+      "handler": "platillos-de-pedido.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/platillos-de-pedidos/:id",
+      "handler": "platillos-de-pedido.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

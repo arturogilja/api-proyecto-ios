@@ -29,9 +29,9 @@
     "costo": {
       "type": "decimal"
     },
-    "pedidos": {
-      "via": "platillos",
-      "collection": "pedido"
+    "platillos_de_pedidos": {
+      "via": "platillo",
+      "collection": "platillos-de-pedido"
     }
   }
 }

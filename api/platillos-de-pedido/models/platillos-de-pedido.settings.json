@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "platillos_de_pedidos",
+  "info": {
+    "name": "PlatillosDePedido"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "platillo": {
+      "model": "platillo",
+      "via": "platillos_de_pedidos"
+    },
+    "pedido": {
+      "model": "pedido",
+      "via": "platillos_de_pedidos"
+    },
+    "cantidad": {
+      "type": "integer"
+    },
+    "comentarios": {
+      "type": "string"
+    }
+  }
+}

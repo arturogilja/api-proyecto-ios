@@ -9,14 +9,6 @@
     "timestamps": true
   },
   "attributes": {
-    "platillos": {
-      "collection": "platillo",
-      "via": "pedidos",
-      "dominant": true
-    },
-    "fecha": {
-      "type": "datetime"
-    },
     "user": {
       "plugin": "users-permissions",
       "model": "user",
@@ -34,7 +26,12 @@
         "pendiente",
         "preparacion",
         "servido"
-      ]
+      ],
+      "default": "pendiente"
+    },
+    "platillos_de_pedidos": {
+      "via": "pedido",
+      "collection": "platillos-de-pedido"
     }
   }
 }
