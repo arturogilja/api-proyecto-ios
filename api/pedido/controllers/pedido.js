@@ -124,6 +124,7 @@ module.exports = {
     entity.user = undefined;
     entity.platillos_de_pedidos = undefined;
     entity.platillos = platillos_de_pedido;
+    strapi.nuevoPedido(pedido);
     return entity;
   },
 
