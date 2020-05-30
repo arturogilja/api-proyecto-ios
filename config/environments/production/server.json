@@ -13,6 +13,9 @@
   },
   "admin": {
     "autoOpen": true,
-    "path": "/dashboard"
+    "path": "/dashboard",
+    "build": {
+      "backend": "https://arturogil.com.mx/api"
+    }
   }
 }
