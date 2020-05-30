@@ -1,14 +1,17 @@
 {
-  "host": "arturogil.com.mx/api/",
-  "port": "",
+  "host": "${process.env.HOST || '0.0.0.0'}",
+  "port": "${process.env.PORT || 1337}",
   "production": true,
   "proxy": {
-    "enabled": false
+    "enabled": true,
+    "ssl": true,
+    "host": "https://arturogil.com.mx/api",
+    "port": "1337"
   },
   "cron": {
     "enabled": false
   },
   "admin": {
-    "autoOpen": false
+    "autoOpen": true
   }
 }
