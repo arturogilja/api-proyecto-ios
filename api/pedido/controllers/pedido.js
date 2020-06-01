@@ -98,8 +98,9 @@ module.exports = {
       return;
     }
 
+    console.log("BEFORE CREATE");
     entity = await strapi.services.pedido.create(ctx.request.body);
-    console.log(entity);
+    console.log("AFTER CREATE");
 
     const { id: pedido } = entity;
     let platillos_de_pedido = [];
