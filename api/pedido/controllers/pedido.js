@@ -129,36 +129,4 @@ module.exports = {
     strapi.nuevoPedido(pedido);
     return entity;
   },
-
-  /**
-   * Modifica un pedido
-   *
-   * @return {Object}
-   */
-
-  async update(ctx) {
-    const { id } = ctx.params;
-
-    let entity;
-
-    const [pedido] = await strapi.services.pedido.find({
-      id: ctx.params.id,
-      "user.id": ctx.state.user.id,
-    });
-
-    if (!pedido) {
-      return ctx.unauthorized(`You can't update this entry`);
-    }
-
-    if (ctx.is("multipart")) {
-      const { data, files } = parseMultipartData(ctx);
-      entity = await strapi.services.pedido.update({ id }, data, {
-        files,
-      });
-    } else {
-      entity = await strapi.services.pedido.update({ id }, ctx.request.body);
-    }
-
-    return sanitizeEntity(entity, { model: strapi.models.pedido });
-  },
 };
